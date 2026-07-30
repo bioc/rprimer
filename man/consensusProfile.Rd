@@ -7,7 +7,7 @@
 consensusProfile(x, ambiguityThreshold = 0)
 }
 \arguments{
-\item{x}{A \code{Biostrings::DNAMultipleAlignment} object.}
+\item{x}{A \code{MultipleAlignment::DNAMultipleAlignment} object.}
 
 \item{ambiguityThreshold}{"Detection level" for ambiguous bases.
 All DNA bases that occur with a relative frequency higher than the

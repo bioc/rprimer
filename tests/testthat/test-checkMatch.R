@@ -5,7 +5,7 @@ data("exampleRprimerAssay")
 data("exampleRprimerMatchOligo")
 data("exampleRprimerMatchAssay")
 
-Biostrings::rowmask(exampleRprimerAlignment, invert = TRUE) <- 1
+MultipleAlignment::rowmask(exampleRprimerAlignment, invert = TRUE) <- 1
 
 # checkMatch ===================================================================
 
@@ -80,10 +80,10 @@ test_that(".checkMatchOligo works", {
 
     ## Check that target and off target identification works
     onTarget <- exampleRprimerAlignment
-    Biostrings::colmask(onTarget, invert = TRUE) <- x$start:x$end
+    MultipleAlignment::colmask(onTarget, invert = TRUE) <- x$start:x$end
     on <- .checkMatchOligo(x, onTarget)
     offTarget <- exampleRprimerAlignment
-    Biostrings::colmask(offTarget) <- x$start:x$end
+    MultipleAlignment::colmask(offTarget) <- x$start:x$end
     off <- .checkMatchOligo(x, offTarget)
     both <- .checkMatchOligo(x, exampleRprimerAlignment)
     expect_equal(on[!grepl("Off", names(on))], both[!grepl("Off", names(both))])

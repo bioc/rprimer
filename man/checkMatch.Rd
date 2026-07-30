@@ -15,7 +15,7 @@ checkMatch(x, target)
 \arguments{
 \item{x}{An \code{RprimerOligo} or \code{RprimerAssay} object.}
 
-\item{target}{A \code{Biostrings::DNAMultipleAlignment} alignment with
+\item{target}{A \code{MultipleAlignment::DNAMultipleAlignment} alignment with
 intended target sequences. Note that it must be
 same alignment that was used for generating the oligos/assays in \code{x}.}
 }

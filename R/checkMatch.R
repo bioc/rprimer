@@ -41,7 +41,7 @@
 #' An \code{RprimerOligo} or \code{RprimerAssay} object.
 #'
 #' @param target
-#' A \code{Biostrings::DNAMultipleAlignment} alignment with
+#' A \code{MultipleAlignment::DNAMultipleAlignment} alignment with
 #' intended target sequences. Note that it must be
 #' same alignment that was used for generating the oligos/assays in \code{x}.
 #'
@@ -241,7 +241,7 @@ setMethod("checkMatch", "RprimerAssay", \(x, target) {
 #' .maskRange(from = 1, to = 10, exampleRprimerAlignment, invert = TRUE)
 .maskRange <- function(from, to, target, ...) {
     selection <- target
-    Biostrings::colmask(selection, ...) <- IRanges::IRanges(
+    MultipleAlignment::colmask(selection, ...) <- IRanges::IRanges(
         start = from, end = to
     )
     Biostrings::DNAStringSet(selection)

@@ -5,7 +5,7 @@ exampleRprimerAlignment <- system.file(
     package = "rprimer"
 )
 
-exampleRprimerAlignment <- Biostrings::readDNAMultipleAlignment(
+exampleRprimerAlignment <- MultipleAlignment::readDNAMultipleAlignment(
     exampleRprimerAlignment,
     format = "fasta"
 )

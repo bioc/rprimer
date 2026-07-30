@@ -1,6 +1,6 @@
 ## Import data to test on
 infile <- system.file("extdata", "example_alignment.txt", package = "rprimer")
-testdata <- Biostrings::readDNAMultipleAlignment(infile)
+testdata <- MultipleAlignment::readDNAMultipleAlignment(infile)
 testmat <- .consensusMatrix(testdata)
 
 # consensusProfile =============================================================
@@ -17,7 +17,7 @@ test_that("consensusProfile works", {
 
 test_that("consensusProfile works with a rowmask", {
     ## Select only one sequence
-    Biostrings::rowmask(testdata, invert = TRUE) <- 3
+    MultipleAlignment::rowmask(testdata, invert = TRUE) <- 3
     prof <- consensusProfile(testdata)
     expect_s4_class(prof, "RprimerProfile")
     expect_true(all(prof$gaps == 0 | prof$gaps == 1))
@@ -25,7 +25,7 @@ test_that("consensusProfile works with a rowmask", {
 })
 
 test_that("consensusProfile works with a colmask", {
-    Biostrings::colmask(testdata, invert = TRUE) <- 500:550
+    MultipleAlignment::colmask(testdata, invert = TRUE) <- 500:550
     prof <- consensusProfile(testdata)
     expect_s4_class(prof, "RprimerProfile")
 })

@@ -10,11 +10,11 @@
 #'
 #' @import shiny
 #'
-#' @importFrom Biostrings readDNAMultipleAlignment
+#' @importFrom MultipleAlignment readDNAMultipleAlignment
 #'
-#' @importFrom Biostrings colmask
+#' @importFrom MultipleAlignment colmask
 #'
-#' @importFrom Biostrings rowmask
+#' @importFrom MultipleAlignment rowmask
 #'
 #' @examples
 #' ## Only run this in interactive R sessions:

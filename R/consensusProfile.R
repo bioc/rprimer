@@ -6,7 +6,7 @@
 #' \code{Biostrings::consensusMatrix()} (Pages et al., 2020).
 #'
 #' @param x
-#' A \code{Biostrings::DNAMultipleAlignment} object.
+#' A \code{MultipleAlignment::DNAMultipleAlignment} object.
 #'
 #' @param ambiguityThreshold
 #' "Detection level" for ambiguous bases.

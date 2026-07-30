@@ -90,7 +90,7 @@ consensusServer <- function(id, inputAlignment) {
             mask3 <- arrangeMask(input$mask3From, input$mask3To, inputAlignment())
             mask <- unique(c(mask1, mask2, mask3))
             if (!is.null(mask)) {
-                Biostrings::colmask(maskedAln) <- mask
+                MultipleAlignment::colmask(maskedAln) <- mask
             }
             maskedAln
         })

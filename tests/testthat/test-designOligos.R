@@ -65,8 +65,8 @@ test_that("oligos works", {
 
     ## test with only one sequence
     infile <- system.file("extdata", "example_alignment.txt", package = "rprimer")
-    testdata <- Biostrings::readDNAMultipleAlignment(infile)
-    Biostrings::rowmask(testdata, invert = TRUE) <- 3
+    testdata <- MultipleAlignment::readDNAMultipleAlignment(infile)
+    MultipleAlignment::rowmask(testdata, invert = TRUE) <- 3
     prof <- consensusProfile(testdata)
     test <- designOligos(prof[1:100, ])
     expect_s4_class(test, "RprimerOligo")

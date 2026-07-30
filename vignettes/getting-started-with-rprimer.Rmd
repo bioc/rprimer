@@ -40,12 +40,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("rprimer")
 ```
 
-For best functionality, it is also recommended to install the Biostrings package [@Bios]: 
-
-```r
-BiocManager::install("Biostrings")
-```
-
 # Overview
 
 The oligo and assay design workflow consists of five functions:
@@ -64,7 +58,6 @@ The package can be run through a Shiny application (a graphical user interface).
 
 ```{r, warning=FALSE, message=FALSE}
 library(rprimer)
-library(Biostrings)
 ```
 
 ## Collection of target sequences and multiple alignment 
@@ -79,7 +72,7 @@ system.file("extdata", "example_alignment.txt", package = "rprimer")
 
 ## Data import {#Data}
 
-The alignment must be imported to R using the `readDNAMultipleAlignment()` function from Biostrings [@Bios]. The input file can contain from one to several thousand sequences. 
+The alignment must be imported to R using the `readDNAMultipleAlignment()` function from MultipleAlignment [@MultAlign]. The input file can contain from one to several thousand sequences. 
 
 Below, I show how to import the file "example_alignment.txt":  
 
@@ -89,7 +82,7 @@ filepath <- system.file("extdata", "example_alignment.txt", package = "rprimer")
 myAlignment <- readDNAMultipleAlignment(filepath, format = "fasta")
 ```
 
-For some applications, there is often an interest in amplifying a specific region of the genome. In such cases, the alignment can be masked so that only the desired oligo binding regions are available for the subsequent design process. This type of masking can be achieved by using `colmask()` from Biostrings [@Bios], as illustrated in the example below:
+For some applications, there is often an interest in amplifying a specific region of the genome. In such cases, the alignment can be masked so that only the desired oligo binding regions are available for the subsequent design process. This type of masking can be achieved by using `colmask()` from MultipleAlignment [@MultAlign], as illustrated in the example below:
 
 ```{r}
 ## Mask everything but position 3000 to 4000 and 5000 to 6000
@@ -98,7 +91,7 @@ myMaskedAlignment <- myAlignment
 colmask(myMaskedAlignment, invert = TRUE) <- c(3000:4000, 5000:6000)
 ```
 
-It is also possible to mask specific sequences by using `rowmask()`. Gap-rich positions can be hidden with `gapmask()` [@Bios].
+It is also possible to mask specific sequences by using `rowmask()`. Gap-rich positions can be hidden with `maskGaps()` [@MultAlign].
 
 ## Design procedure 
 

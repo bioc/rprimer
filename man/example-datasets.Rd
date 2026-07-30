@@ -41,8 +41,8 @@ The purpose of these datasets is to illustrate the functionality of
 rprimer. The following datasets are provided:
 
 \itemize{
-\item \code{exampleRprimerAlignment} - a \code{Biostrings::DNAMultipleAlignment}
-object (Pages et al., 2020)
+\item \code{exampleRprimerAlignment} - a \code{MultipleAlignment::DNAMultipleAlignment}
+object (Carlson & Aboyoun, 2020)
 containing an alignment of 50 hepatitis E virus
 sequences collected from NCBI GenBank. See
 "documentation_example_alignment.txt" within the inst/script folder of this
@@ -62,8 +62,8 @@ exampleRprimerAlignment.
 }
 }
 \references{
-H. Pages, P. Aboyoun, R. Gentleman and S. DebRoy (2020). Biostrings:
-Efficient manipulation of biological strings. R package version
-2.57.2.
+M. Carlson and P. Aboyoun (2026). MultipleAlignment:
+Representation of multiple sequence alignments in Bioconductor.
+R package version 0.99.5.
 }
 \keyword{datasets}
