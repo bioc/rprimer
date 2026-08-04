@@ -32,7 +32,7 @@ In this vignette, I describe and demonstrate the use of the package by designing
 
 # Installation
 
-To install rprimer, start R (version 4.2.0 or higher), and enter the following code:
+To install rprimer, start R (version 4.6.0 or higher), and enter the following code:
 
 ``` r
 if (!requireNamespace("BiocManager", quietly = TRUE))
