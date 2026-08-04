@@ -23,24 +23,24 @@ plotData(x, ...)
 }
 \arguments{
 \item{x}{An \code{RprimerProfile}, \code{RprimerOligo} \code{RprimerAssay},
-\code{rprimerMatchOligo} or \code{RprimerMatchAssay} object.}
+\code{RprimerMatchOligo} or \code{RprimerMatchAssay} object.}
 
 \item{...}{Optional arguments for \code{RprimerProfile} objects.}
 
-\item{type}{For \code{Rprimeroligo} objects:
+\item{type}{For \code{RprimerOligo} objects:
 Type of plot: \code{"overview"}, or
 \code{"nucleotide"}, defaults to \code{"overview"}.}
 
-\item{highlight}{For \code{Rprimeroligo} objects:
+\item{highlight}{For \code{RprimerOligo} objects:
 If a specific region within an overview plot should be highlighted.
 A numeric vector indicating the start and end position,
 e.g. \code{c(100, 1000)}, defaults to \code{NULL}
 (i.e., no highlight).}
 
-\item{rc}{For \code{Rprimeroligo} objects, and \code{type = "nucleotide"}:
+\item{rc}{For \code{RprimerOligo} objects, and \code{type = "nucleotide"}:
 If the plotted sequence should be displayed
 as reverse complement or not.
-\code{TRUE} or {FALSE}, defaults to \code{FALSE}.
+\code{TRUE} or \code{FALSE}, defaults to \code{FALSE}.
 
 See examples below.}
 }
@@ -53,17 +53,17 @@ Rprimer classes.
 }
 \section{Methods (by class)}{
 \itemize{
-\item \code{RprimerProfile}: 
+\item \code{plotData(RprimerProfile)}: Plot an \code{RprimerProfile} object
 
-\item \code{RprimerOligo}: 
+\item \code{plotData(RprimerOligo)}: Plot an \code{RprimerOligo} object
 
-\item \code{RprimerAssay}: 
+\item \code{plotData(RprimerAssay)}: Plot an \code{RprimerAssay} object
 
-\item \code{RprimerMatchOligo}: 
+\item \code{plotData(RprimerMatchOligo)}: Plot an \code{RprimerMatchOligo} object
 
-\item \code{RprimerMatchAssay}: 
+\item \code{plotData(RprimerMatchAssay)}: Plot an \code{RprimerMatchAssay} object
+
 }}
-
 \examples{
 #### Plot an RprimerProfile object
 

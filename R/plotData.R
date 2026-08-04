@@ -5,28 +5,28 @@
 #'
 #' @param x
 #' An \code{RprimerProfile}, \code{RprimerOligo} \code{RprimerAssay},
-#' \code{rprimerMatchOligo} or \code{RprimerMatchAssay} object.
+#' \code{RprimerMatchOligo} or \code{RprimerMatchAssay} object.
 #'
 #' @param ...
 #' Optional arguments for \code{RprimerProfile} objects.
 #'
 #' @param type
-#' For \code{Rprimeroligo} objects:
+#' For \code{RprimerOligo} objects:
 #' Type of plot: \code{"overview"}, or
 #' \code{"nucleotide"}, defaults to \code{"overview"}.
 #'
 #' @param highlight
-#' For \code{Rprimeroligo} objects:
+#' For \code{RprimerOligo} objects:
 #' If a specific region within an overview plot should be highlighted.
 #' A numeric vector indicating the start and end position,
 #' e.g. \code{c(100, 1000)}, defaults to \code{NULL}
 #' (i.e., no highlight).
 #'
 #' @param rc
-#' For \code{Rprimeroligo} objects, and \code{type = "nucleotide"}:
+#' For \code{RprimerOligo} objects, and \code{type = "nucleotide"}:
 #' If the plotted sequence should be displayed
 #' as reverse complement or not.
-#' \code{TRUE} or {FALSE}, defaults to \code{FALSE}.
+#' \code{TRUE} or \code{FALSE}, defaults to \code{FALSE}.
 #'
 #' See examples below.
 #'
@@ -37,7 +37,7 @@ setGeneric("plotData", \(x, ...) standardGeneric("plotData"))
 
 # Methods ======================================================================
 
-#' @describeIn plotData
+#' @describeIn plotData Plot an \code{RprimerProfile} object
 #'
 #' @importFrom patchwork wrap_plots
 #'
@@ -85,7 +85,7 @@ setMethod("plotData", "RprimerProfile", \(x,
     }
 })
 
-#' @describeIn plotData
+#' @describeIn plotData Plot an \code{RprimerOligo} object
 #'
 #' @aliases plotData
 #'
@@ -110,7 +110,7 @@ setMethod("plotData", "RprimerOligo", \(x) {
     )
 })
 
-#' @describeIn plotData
+#' @describeIn plotData Plot an \code{RprimerAssay} object
 #'
 #' @importFrom patchwork wrap_plots
 #'
@@ -133,7 +133,7 @@ setMethod("plotData", "RprimerAssay", \(x) {
     )
 })
 
-#' @describeIn plotData
+#' @describeIn plotData Plot an \code{RprimerMatchOligo} object
 #'
 #' @export
 #'
@@ -151,7 +151,7 @@ setMethod("plotData", "RprimerMatchOligo", \(x) {
     .plotMatch(x)
 })
 
-#' @describeIn plotData
+#' @describeIn plotData Plot an \code{RprimerMatchAssay} object
 #'
 #' @export
 #'

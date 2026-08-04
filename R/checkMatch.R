@@ -208,7 +208,7 @@ setGeneric("checkMatch", \(x, target) standardGeneric("checkMatch"))
 
 # Methods ======================================================================
 
-#' @describeIn checkMatch
+#' @describeIn checkMatch Check match for an \code{RprimerOligo} object
 #'
 #' @export
 setMethod("checkMatch", "RprimerOligo", \(x, target) {
@@ -221,7 +221,7 @@ setMethod("checkMatch", "RprimerOligo", \(x, target) {
 
 #' Check match of an RprimerAssay object (method)
 #'
-#' @describeIn checkMatch
+#' @describeIn checkMatch Check match for an \code{RprimerAssay} object
 #'
 #' @export
 setMethod("checkMatch", "RprimerAssay", \(x, target) {

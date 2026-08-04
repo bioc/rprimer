@@ -167,7 +167,7 @@
 #' sequence goes from random coil to duplex state, by using  the following
 #' equation:
 #'
-#' \mjsdeqn{ \Delta G ^o _T = ( \Delta H ^o \cdot 1000 - T \cdot \Delta S ^o ) / 1000}{ASCII representation}
+#' \mjsdeqn{ \Delta G ^{o} _{T} = ( \Delta H ^{o} \cdot 1000 - T \cdot \Delta S ^{o} ) / 1000}{dGoT = (dHo * 1000 - T * dSo) / 1000}
 #
 #' For both tm and delta G, the following salt correction method is used
 #' for \mjseqn{ \Delta S^o }, as

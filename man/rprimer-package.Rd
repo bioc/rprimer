@@ -24,5 +24,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Sofia Persson \email{sofiapersson27@gmail.com} (\href{https://orcid.org/0000-0003-2611-3030}{ORCID})
 
+Authors:
+\itemize{
+  \item Sofia Persson \email{sofiapersson27@gmail.com} (\href{https://orcid.org/0000-0003-2611-3030}{ORCID})
+}
+
 }
 \keyword{internal}
